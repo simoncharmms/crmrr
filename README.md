@@ -45,6 +45,8 @@ source code on [GitHub](https://github.com/pykeen/pykeen) with:
 pip install git+https://github.com/pykeen/pykeen.git
 ```
 
+and then downgrade to the version we used, which is `pykeen==1.10.1`.
+
 ## Quickstart
 
 This example shows how to train three different Knowledge Graph (KG) embedding models on a dataset and test the Cluster Robust Mean Reciprocal Rank (CRMRR) against other rank-based metrics.
@@ -81,9 +83,9 @@ We propose a novel rank-based metric that reflects this circumstance based on th
 Let $$MRR (r_1, ..., r_n)$$ be the MRR of all completion candidates scored by a scoring function $$f_r(h,t)$$  of an embedding-based KGC model $$\phi$$ on a clustered KG. 
 Then, the *Cluster-Robust Mean Reciprocal Rank* is
 
-$$CRMRR (r_1, ..., r_n) = \underbrace{\frac{1}{n} \sum^{n}_{i=1} \sum^{m}_{j=1} r_{i}^{-1}}_{MRR (r_1, ..., r_n)} \underbrace{+\lvert c \rvert^{ - \left( \frac{r_{j \vert cc}}{n} \right) } - 1}_{\text{Penalty term}} \label{eq:mrr}$$
+$$CRMRR (r_1, ..., r_n) = \underbrace{\frac{1}{n} \sum^{n}_{i=1} \sum^{m}_{j=1} r_{i}^{-1}}_{MRR (r_1, ..., r_n)} \underbrace{+\lvert c \rvert^{ - \left( \frac{r_{j \vert cc}}{n} \right) } - 1}_{\text{Penalty term}}$$
 
-where $n$ is the total count of ranks $r_{i}$. $\lvert c \rvert$ is the count of clusters of a clustered KG. $m$ is the count of cross-cluster ranks $r_{j \vert cc}$ from cross-cluster completion candidates $$(h,r,t)_{cc}$$.
+where $$n$$ is the total count of ranks $$r_{i}$$. $$\lvert c \rvert$$ is the count of clusters of a clustered KG. $$m$$ is the count of cross-cluster ranks $$r_{j \vert cc}$$ from cross-cluster completion candidates $$(h,r,t)_{cc}$$.
 
 The penalty term of the *CRMRR* shows beneficial behavior for the choice of the most realistic embedding model under the assumption of cluster robust errors, penalizing less for the case of few clusters and stronger the higher the given rank.
 
