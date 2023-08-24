@@ -23,7 +23,6 @@
   <a href="#quickstart">Quickstart</a> •
   <a href="#implementation">Implementation</a> •
   <a href="#experiments">Experiments</a> •
-  <a href="#supporters">Support</a> •
   <a href="#citation">Citation</a>
   <a href="#contributing">Contributing</a> •
 </p>
@@ -128,7 +127,7 @@ The following metrics are used as a benchmark for CRMRR.
 ||||||
 | **Cluster Robust  Mean Reciprocal Rank (MRR)**                                                             | (-∞, ∞)  | 📈           | The inverse of the harmonic mean over all ranks.            | Ranking        |
 
-## Experimentation
+## Experiments
 
 Note that reproducing the full expirments from the paper can take a considerable amount of training time. 
 Therefore, the in `constants.py` you can specify whether you want to sample the data and to what extent:
@@ -180,7 +179,8 @@ Experiments on the benchmark datasets yielded the following results:
 * $CRMRR$ outperformed $MR$, $MRR$ and $H_{10}$ in 71\% of the cases. 
 * $CRMRR$ tends to perform well on large \acp{kg}. 
 * The exploration of other \ac{kgc} methods, such as Tensor Factorization or Rule Based approaches are promising, due to the model-agnostic properties of $CRMRR$.
-* 
+
+
   <a>
     <img src="figures/FIG_20230502_rank-based_metrics.svg" alt="Graphical abstract" width="1100">
   </a>
