@@ -78,19 +78,18 @@ in ``pykeen``.
 In embedding-based KG Completion (KGC), the restriction of the model to learning completion candidates from existing triplets in the graph is a problem under the Open World Assumption.
 Rank-based metric for KGC do not reflect this problem and thus convey only the likelihood of a true completion candidate given the existing triples.
 We propose a novel rank-based metric that reflects this circumstance based on the assumption of [cluster robust inference](https://www.sciencedirect.com/science/article/pii/S0304407622000781).
-Let $MRR (r_1, ..., r_n)$ be the MRR of all completion candidates scored by a scoring function $f_r(h,t)$  of an embedding-based KGC model $\phi$ on a clustered KG. 
-Then, the \textbf{Cluster-Robust Mean Reciprocal Rank} is
-$$
-CRMRR (r_1, ..., r_n) = \underbrace{\frac{1}{n} \sum^{n}_{i=1} \sum^{m}_{j=1} r_{i}^{-1}}_{MRR (r_1, ..., r_n)} \underbrace{+\lvert c \rvert^{ - \left( \frac{r_{j \vert cc}}{n} \right) } - 1}_{\text{Penalty term}} \label{eq:mrr}
-$$
+Let $$MRR (r_1, ..., r_n)$$ be the MRR of all completion candidates scored by a scoring function $$f_r(h,t)$$  of an embedding-based KGC model $$\phi$$ on a clustered KG. 
+Then, the *Cluster-Robust Mean Reciprocal Rank* is
 
-where $n$ is the total count of ranks $r_{i}$. $\lvert c \rvert$ is the count of clusters of a clustered \ac{kg}. $m$ is the count of \textit{cross-cluster} ranks $r_{j \vert cc}$ from cross-cluster completion candidates $(h,r,t)_{cc}$.
+$$CRMRR (r_1, ..., r_n) = \underbrace{\frac{1}{n} \sum^{n}_{i=1} \sum^{m}_{j=1} r_{i}^{-1}}_{MRR (r_1, ..., r_n)} \underbrace{+\lvert c \rvert^{ - \left( \frac{r_{j \vert cc}}{n} \right) } - 1}_{\text{Penalty term}} \label{eq:mrr}$$
 
-The penalty term of the $CRMRR$ shows beneficial behavior for the choice of the most realistic embedding model under the assumption of cluster robust errors, penalizing less for the case of few clusters and stronger the higher the given rank.
+where $n$ is the total count of ranks $r_{i}$. $\lvert c \rvert$ is the count of clusters of a clustered KG. $m$ is the count of cross-cluster ranks $r_{j \vert cc}$ from cross-cluster completion candidates $$(h,r,t)_{cc}$$.
 
-  <a>
-    <img src="figures/FIG_20221125_cluster_robust_mean_reciprocal_rank_penalty_term_n_1000.svg" alt="CRMRR" width="600">
-  </a>
+The penalty term of the *CRMRR* shows beneficial behavior for the choice of the most realistic embedding model under the assumption of cluster robust errors, penalizing less for the case of few clusters and stronger the higher the given rank.
+
+<a>
+  <img src="figures/FIG_20221125_cluster_robust_mean_reciprocal_rank_penalty_term_n_1000.svg" alt="CRMRR" width="600">
+</a>
 
 The implementation of the CRMRR can be found in `src/cluster_robust_mean_reciprocal_rank.py`.
 
