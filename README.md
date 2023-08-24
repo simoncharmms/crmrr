@@ -138,6 +138,7 @@ SAMPLE = True
 # Specify sample ratio.
 SAMPLE_RATIO = 0.001
 ```
+Furthermore, we provide some pre-trained embeddings in `models`.
 
 ### Datasets 
 
@@ -181,9 +182,9 @@ Experiments on the benchmark datasets yielded the following results:
 * The exploration of other \ac{kgc} methods, such as Tensor Factorization or Rule Based approaches are promising, due to the model-agnostic properties of $CRMRR$.
 
 
-  <a>
-    <img src="figures/FIG_20230502_rank-based_metrics.svg" alt="Graphical abstract" width="1100">
-  </a>
+<a>
+  <img src="figures/FIG_20230502_rank-based_metrics.svg" alt="Experiment results" width="1000">
+</a>
 
 ## Citation
 
