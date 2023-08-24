@@ -21,11 +21,11 @@
 <p align="center">
   <a href="#installation">Installation</a> •
   <a href="#quickstart">Quickstart</a> •
-  <a href="#datasets">Datasets (37)</a> •
-  <a href="#inductive-datasets">Inductive Datasets (5)</a> •
-  <a href="#models">Models (3)</a> •
+  <a href="#implementation">Implementation</a> •
+  <a href="#experiments">Experiments</a> •
   <a href="#supporters">Support</a> •
   <a href="#citation">Citation</a>
+  <a href="#contributing">Contributing</a> •
 </p>
 
 ## Installation
@@ -154,6 +154,7 @@ The following datasets were retrieved from [`SNAP`](https://snap.stanford.edu/da
 | BTC alpha        | [`Trust network of people who trade using Bitcoin on a platform called Bitcoin Alpha.`](https://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html) | [Kumar *et al*., 2018](https://dl.acm.org/doi/pdf/10.1145/3159652.3159729)    | 2 k       | 3 k     |
 | BTC otc          | [`Trust network of people who trade using Bitcoin on a platform called Bitcoin OTC.`](https://snap.stanford.edu/data/soc-sign-bitcoin-otc.html)     | [Kumar *et al*., 2018](https://dl.acm.org/doi/pdf/10.1145/3159652.3159729)    | 5 k       | 3 k     |
 
+**ATTENTION: Please use the links above to fetch web-google and sx-stackoverflow, those datasets are not pushed to GitHub due to file size.**
 
 The benchmark datasets cover a variety of KGs and differ in node count, relation count, mean degree, transitivity and clustering coefficient.
 
