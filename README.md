@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-    <b>CRMRR</b> (<b>C</b>luster <b>R</b>obust <b>M</b>ean <b>R</b>eciprocal <b>R</b>ank) is a novel rank-based metric for the evaluation of embedding-based Knowledge Graph Completion models.
+    <b>CRMRR</b> (<b>C</b>luster <b>R</b>obust <b>M</b>ean <b>R</b>eciprocal <b>R</b>ank) is a novel, rank-based metric for the evaluation of embedding-based Knowledge Graph Completion models.
 </p>
 
 <p align="center">
