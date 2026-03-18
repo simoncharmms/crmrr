@@ -1,0 +1,8 @@
+services:
+  crmrr:
+    build: .
+    platform: linux/amd64
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./figures:/app/figures
