@@ -24,3 +24,10 @@ models/
 # OS
 .DS_Store
 Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Editor swap files
+*.swp
+*.swo
